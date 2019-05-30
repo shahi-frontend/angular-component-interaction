@@ -1,4 +1,20 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>{{title}}</h1>
+
+<div>
+  <img [src]="imgUrl" alt="" width=300 />
+</div>
+
+<div>
+  <button type="button" (click)="counterInc()">Click</button>
+  <p>Clicked {{count}} times</p>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="name" />
+  <p>Welcome {{name}}</p>
+</div>
+
+<div>
+  <input type="text" [ngModel]="name" (ngModelChange)="nameChangeDec($event)" />
+  <p>Welcome {{name}}</p>
+</div>
